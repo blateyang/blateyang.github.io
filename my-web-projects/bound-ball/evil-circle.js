@@ -160,7 +160,7 @@ EvilCircle.prototype.setControls = function(){
     console.log(this.x + "," + this.y);
       //阻止浏览器下拉事件
     // document.querySelector('body').ontouchmove() = event => {event.preventDefault();};
-    document.querySelector("body").addEventListener("ontouchmove", function(e){e.preventDefault();}, {"passive":false}); //第3个参数要设为false，否则preventDefault会被忽略
+    document.querySelector("body").addEventListener("ontouchmove", function(e){e.preventDefault();}, {passive:false}); //第3个参数要设为false，否则preventDefault会被忽略
  
   }
 }
