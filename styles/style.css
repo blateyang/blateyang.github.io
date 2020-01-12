@@ -18,7 +18,7 @@ text-shadow: 3px 3px 1px black;
 img{
   display: block;
   margin: 0 auto;
-  width: 30rem;
+  width: 90%;
 }
 
 p, ol {
@@ -46,13 +46,11 @@ float: left;
 img#jokesImg{
 padding-top: 4rem;
 padding-bottom: 6rem;
-width: 30rem;
 }
 
 img#ballImg{
 padding-top:3rem;
 padding-bottom:3rem;
-width: 30rem;
 }
 
 p.project-name{
