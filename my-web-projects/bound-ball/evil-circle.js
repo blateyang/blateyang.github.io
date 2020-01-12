@@ -1,3 +1,13 @@
+function IsPC(){  
+  var userAgentInfo = navigator.userAgent;
+  var Agents = new Array("Android", "iPhone");  
+  var flag = true;  
+  for (var v = 0; v < Agents.length; v++) {  
+      if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }  
+  }  
+  return flag;  
+}
+
 // 设定画布
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
@@ -118,18 +128,39 @@ EvilCircle.prototype.checkBounds = function(){
   }
 }
 
+var _x_start,_y_start,_x_move,_y_move,_x_end,_y_end;
 EvilCircle.prototype.setControls = function(){
   // e => {} 是箭头函数，类似python中的map/reduce，将输入映射到输出
-  window.onkeydown = e => { // 键盘按下的事件监听器
-    if(e.key === 'a')
-      this.x -= this.velX;
-    else if(e.key === 'd')
-      this.x += this.velX;
-    else if(e.key === 'w')
-      this.y -= this.velY;
-    else if(e.key === 's')
-      this.y += this.velY;    
+  if(IsPC()){
+    window.onkeydown = e => { // 键盘按下的事件监听器
+      if(e.key === 'a')
+        this.x -= this.velX;
+      else if(e.key === 'd')
+        this.x += this.velX;
+      else if(e.key === 'w')
+        this.y -= this.velY;
+      else if(e.key === 's')
+        this.y += this.velY;    
+    }
   }
+  else{
+    window.ontouchstart = e => {
+      _x_start=e.touches[0].pageX;
+      _y_start=e.touches[0].pageY;
+      console.log("start",_x_start)
+    }
+    window.ontouchmove = e => {
+      _x_move=e.touches[0].pageX;
+      _y_move=e.touches[0].pageY;
+      console.log("move",_x_move)
+      this.x += (parseFloat(_x_move) - parseFloat(_x_start))/10;
+      this.y +=  (parseFloat(_y_move) - parseFloat(_y_start))/10;
+      console.log(parseFloat(_x_move)-parseFloat(_x_start));
+    }
+    console.log(this.x + "," + this.y);
+  }
+  //阻止浏览器下拉事件
+//  document.querySelector('body').ontouchmove = event => {event.preventDefault();};
 }
 
 EvilCircle.prototype.collisionDetect = function(){
@@ -193,7 +224,7 @@ evilCircle = new EvilCircle(
   20
 )
 
-evilCircle.setControls(); // 启动恶魔圈的键盘监听器
+evilCircle.setControls(); // 启动恶魔圈的位置监听器
 var dStart = new Date();
 var gameStartTime = dStart.getTime();
 loop();
