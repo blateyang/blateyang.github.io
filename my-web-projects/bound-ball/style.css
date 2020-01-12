@@ -24,18 +24,17 @@ h1 {
   text-shadow: 0 0 4px white;
 }
 
-p#count {
+p{
   position: absolute;
   margin: 0;
-  top: 35px;
-  right: 5px;
+  font-size: 2rem;
+  right: 1rem;
   color: #aaa;
+}
+p#count {
+  top: 3rem;
 }
 
 p#time{
-  position: absolute;
-  margin: 0;
-  top: 50px;
-  right: 5px;
-  color: #aaa;
+  top: 5rem;
 }
