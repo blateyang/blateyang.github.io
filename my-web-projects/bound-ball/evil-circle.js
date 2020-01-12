@@ -158,9 +158,9 @@ EvilCircle.prototype.setControls = function(){
       console.log(parseFloat(_x_move)-parseFloat(_x_start));
     }
     console.log(this.x + "," + this.y);
+      //阻止浏览器下拉事件
+    document.querySelector('body').ontouchmove = event => {event.preventDefault();};
   }
-  //阻止浏览器下拉事件
-//  document.querySelector('body').ontouchmove = event => {event.preventDefault();};
 }
 
 EvilCircle.prototype.collisionDetect = function(){
