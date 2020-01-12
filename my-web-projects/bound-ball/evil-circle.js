@@ -9,7 +9,7 @@ const height = canvas.height = window.innerHeight;
 var para = document.querySelector("p#count");
 var paraT = document.querySelector("p#time")
 // 保存小球数量的变量
-var ballsNum = 25;
+var ballsNum = 5;
 var count = 0;
 
 // 生成随机数的函数

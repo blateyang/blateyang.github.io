@@ -1,61 +1,66 @@
 html {
-    /* px 表示 “像素（pixels）”: 基础字号为 10 像素 */
-    font-size: 10px; 
-    /* Google fonts 输出的 CSS */
-    font-family: 'Roboto', sans-serif;
-    /* background-color: #3f87ed; */
-  }
+  /* px 表示 “像素（pixels）”: 基础字号为 10 像素 */
+  font-size: 20px; /* 对桌面端20px较为合适，对移动端5px较为合适
+  /* Google fonts 输出的 CSS */
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #3f87ed; */
+}
 
 h1 {
-  margin: 0;
-  padding: 20px 0;    
-  color: #3f87ed;
-  font-size: 200px;
-  text-align: center;
-  text-shadow: 3px 3px 1px black;
+margin: 0;
+padding: 2rem 0;
+color: #3f87ed;
+font-size: 8rem;
+text-align: center;
+text-shadow: 3px 3px 1px black;
 }
 
 img{
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+  width: 30rem;
 }
 
 p, ol {
-    font-size: 80px;    
-    line-height: 2;
-    letter-spacing: 1px;
+  font-size: 2rem;
+  line-height: 2;
+  letter-spacing: 1px;
 }
 
 #hint{
-  font-size: 10px;
-  color: #164e9e;
-  text-align: center;
+font-size: 1rem;
+color: #164e9e;
+text-align: center;
 }
 
 body {
-    background-color: #FF9500;
-  }
+  background-color: #FF9500;
+  font-size:62.5%;
+}
 
 div div.show{
-  width: 33%;
-  float: left;
+width: 33%;
+float: left;
 }
 
 img#jokesImg{
-  padding-top:100px;
-  padding-bottom:100px;
+padding-top: 4rem;
+padding-bottom: 6rem;
+width: 30rem;
 }
 
 img#ballImg{
-  padding-top:50px;
+padding-top:3rem;
+padding-bottom:3rem;
+width: 30rem;
 }
 
 p.project-name{
-  font-size: 50px;
-  text-align: center;
+font-size: 3rem;
+text-align: center;
 }
 
 ul{
-  font-size: 40px;
-  margin: 0 40px;
+font-size: 2rem;
+margin: 0 4px;
 }
