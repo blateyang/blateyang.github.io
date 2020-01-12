@@ -3,14 +3,14 @@ html {
     font-size: 10px; 
     /* Google fonts 输出的 CSS */
     font-family: 'Roboto', sans-serif;
-    background-color: #3f87ed;
+    /* background-color: #3f87ed; */
   }
 
 h1 {
   margin: 0;
   padding: 20px 0;    
   color: #3f87ed;
-  font-size: 50px;
+  font-size: 200px;
   text-align: center;
   text-shadow: 3px 3px 1px black;
 }
@@ -20,8 +20,8 @@ img{
     margin: 0 auto;
 }
 
-p, li {
-    font-size: 16px;    
+p, ol {
+    font-size: 80px;    
     line-height: 2;
     letter-spacing: 1px;
 }
@@ -33,9 +33,29 @@ p, li {
 }
 
 body {
-    width: 600px;
     background-color: #FF9500;
-    border: 5px solid black;
-    margin: 0 auto;
-    padding: 0 20px 50px 20px;
   }
+
+div div.show{
+  width: 33%;
+  float: left;
+}
+
+img#jokesImg{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+
+img#ballImg{
+  padding-top:50px;
+}
+
+p.project-name{
+  font-size: 50px;
+  text-align: center;
+}
+
+ul{
+  font-size: 40px;
+  margin: 0 40px;
+}
