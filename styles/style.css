@@ -15,10 +15,11 @@ text-align: center;
 text-shadow: 3px 3px 1px black;
 }
 
-img{
+body img{
   display: block;
   margin: 0 auto;
-  width: 90%;
+  width:30%;
+  /* width: 90%; */
 }
 
 p, ol {
@@ -43,9 +44,13 @@ width: 33%;
 float: left;
 }
 
+div div.show img{
+  width:90%;
+}
+
 img#jokesImg{
 padding-top: 4rem;
-padding-bottom: 6rem;
+padding-bottom: 8rem;
 }
 
 img#ballImg{
@@ -62,3 +67,4 @@ ul{
 font-size: 2rem;
 margin: 0 4px;
 }
+
