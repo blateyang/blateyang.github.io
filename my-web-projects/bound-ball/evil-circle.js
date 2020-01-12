@@ -179,7 +179,7 @@ EvilCircle.prototype.collisionDetect = function(){
         para.textContent = "还剩" + count + "个球"
         if(count === 0){
           var dEnd = new Date();
-          alert("共耗时" + Math.floor((dEnd.getTime() - gameStartTime)/1000) + "秒");
+          paraT.textContent = "共耗时" + Math.floor((dEnd.getTime() - gameStartTime)/1000) + "秒";
 
         }        
       }
