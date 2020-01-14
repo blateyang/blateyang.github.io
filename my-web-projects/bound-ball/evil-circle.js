@@ -7,6 +7,11 @@ function IsPC(){
   }  
   return flag;  
 }
+var scale = 4; // 适配github网站和移动端的缩放因子
+if(!IsPC()){
+  scale = 1;
+  document.documentElement.style.fontSize = "5px";
+}
 
 // 设定画布
 const canvas = document.querySelector('canvas');
@@ -97,7 +102,7 @@ Ball.prototype.collisionDetect = function(){
 
 //恶魔圈对象
 function EvilCircle(x, y, exists, color, size){
-  Shape.call(this, x, y, 20, 20, exists);
+  Shape.call(this, x, y, 20*scale, 20*scale, exists);
   this.color = color;
   this.size = size;
 }
@@ -153,15 +158,14 @@ EvilCircle.prototype.setControls = function(){
       _x_move=e.touches[0].pageX;
       _y_move=e.touches[0].pageY;
       console.log("move",_x_move)
-      this.x += (parseFloat(_x_move) - parseFloat(_x_start))/10;
-      this.y +=  (parseFloat(_y_move) - parseFloat(_y_start))/10;
+      this.x += (parseFloat(_x_move) - parseFloat(_x_start))/20;
+      this.y +=  (parseFloat(_y_move) - parseFloat(_y_start))/20;
       console.log(parseFloat(_x_move)-parseFloat(_x_start));
     }
-    console.log(this.x + "," + this.y);
-      //阻止浏览器下拉事件
+      //阻止浏览器下拉事件(此方法对安卓貌似没用)
     // document.querySelector('body').ontouchmove() = event => {event.preventDefault();};
-    document.querySelector("body").addEventListener("ontouchmove", function(e){e.preventDefault();}, {passive:false}); //第3个参数要设为false，否则preventDefault会被忽略
- 
+    document.querySelector("body").addEventListener("ontouchmove", function(e){e.preventDefault();}, false); //第3个参数要设为false，否则preventDefault会被忽略
+    console.log(this.x + "," + this.y);
   }
 }
 
@@ -194,11 +198,11 @@ function loop(){
     ball = new Ball(
       random(0, width),
       random(0, height),
-      random(-7, 7),
-      random(-7, 7),
+      random(-7*scale, 7*scale),
+      random(-7*scale, 7*scale),
       true,
       randomColor(),
-      random(10, 20)
+      random(10*scale, 20*scale)
     );
     balls.push(ball);
     count++;
@@ -223,7 +227,7 @@ evilCircle = new EvilCircle(
   random(0, height),
   true,
   "red",
-  20
+  20*scale
 )
 
 evilCircle.setControls(); // 启动恶魔圈的位置监听器
