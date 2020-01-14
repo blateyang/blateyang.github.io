@@ -1,8 +1,6 @@
 @charset "UTF-8";
 html {
-  /* px 表示 “像素（pixels）”: 基础字号为 5 像素 */
-  font-size: 5px; 
-  /* Google fonts 输出的 CSS */
+  /* 发布到github上的网页要与在本地浏览器显示的一致，本地浏览器显示比例要缩放到25% */
   font-family: 'Roboto', sans-serif;
   /* background-color: #3f87ed; */
 }
