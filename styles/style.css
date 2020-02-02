@@ -7,63 +7,62 @@ html {
 
 h1 {
   margin: 0;
+  /* rem：相对于html根元素的字体大小， 1rem默认为16px */
   padding: 2rem 0;
   color: #3f87ed;
   font-size: 6rem;
   text-align: center;
   text-shadow: 3px 3px 1px black;
-  }
+}
   
-  body img{
-    display: block;
-    margin: 0 auto;
-    width:20%;
-    /* width: 90%; */
-  }
+#HomeImg {
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  /* width: 90%; */
+}
   
-  p, ol {
-    font-size: 2rem;
-    line-height: 2;
-    letter-spacing: 1px;
-  }
+p, 
+ol {
+  font-size: 2rem;
+  line-height: 2;
+  letter-spacing: 1px;
+}
   
-  #hint{
-  font-size: 1rem;
+#hint {
+  font-size: 2rem;
   color: #164e9e;
   text-align: center;
-  }
+}
   
-  body {
-    background-color: #FF9500;
-    font-size:62.5%;
-  }
-  
-div.show{
+body {
+  background-color: #FF9500;
+}
+
+.project {
+  /* 浮动布局 */
+  float:left; 
   width: 33%;
-  float: left;
-  }
-  
- div.show img{
-    width:50%;
-  }
-  
-  #jokesImg{
-  padding-top: 4rem;
-  padding-bottom: 8rem;
-  }
-  
-  #ballImg{
-  padding-top:3rem;
-  padding-bottom:3rem;
-  }
-  
-  p.project-name{
+}
+
+.img-div {
+  display:table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 45rem;
+}
+
+.img-div img {
+  max-width: 90%;
+}
+
+a .project-name{
   font-size: 3rem;
   text-align: center;
-  }
-  
-  ul{
+}
+
+ul{
   font-size: 2rem;
   margin: 0 4px;
-  }
+}
   
