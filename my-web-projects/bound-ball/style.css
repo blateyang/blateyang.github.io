@@ -1,0 +1,40 @@
+html, body {
+  margin: 0;
+}
+
+html {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 8rem;
+  letter-spacing: -1px;
+  position: fixed;
+  margin: 0;
+  top: -4px;
+  right: 5px;
+
+  color: transparent;
+  text-shadow: 0 0 4px white;
+}
+
+p{
+  position: fixed;
+  margin: 0;
+  font-size: 8rem;
+  right: 1rem;
+  color: #aaa;
+}
+p#count {
+  top: 10rem;
+}
+
+p#time{
+  top: 20rem;
+}

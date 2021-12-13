@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blateyang的第一个网站</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> -->
+    <link rel = "shutcut icon" href="images/sunflower.jpg">
+    <script src="scripts/main.js" async></script>
+  </head>
+  <body>
+    <h1>Blateyang的第一个网站</h1>
+    <div style="width: 1200;height: 800;">
+      <img id="HomeImg" src="images/sunflower2.JPG" alt="HomePage image">
+    </div>
+    <p id="hint">点击图片试一试</p>
+    <p> 这是我制作的第一个网站，主要分了以下几步：
+        <ol>
+            <li>安装Web开发软件:编辑器（如VScode)、浏览器还有Web服务器(python的django,java的tomcat等）</li>
+            <li>对项目进行初步的设计和构思</li>
+            <li>设计文件的结构</li>
+            <li>编写html呈现内容</li>
+            <li>编写CSS规定内容的样式style</li>
+            <li>编写javascript脚本用于网页交互</li>
+            <li>最后发布网页</li>
+        </ol>
+    </p>
+    <p>参考链接：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web">HTML基础：学习web开发</a></p>
+    <p>我练习过的其它一些项目:</p>
+      <div class="project">
+        <div class="img-div">
+          <img id="jokesImg" src="images/jokes-generator.PNG" alt="">
+        </div>
+        <div class="project-desc">
+            <a href="my-web-projects/jokes-generator/index.html"><p class="project-name">笑话生成器</p></a>
+            <ul>
+              <li>点击“随机生成笑话”按钮时生成一则笑话。</li>
+              <li>若“生成”按钮按下之前，你在“输入自定义的名字”文字框中输入了一个自定义名字，那么生成的笑话中原有的名字（李雷 / Bob）将被取代。</li>  
+              <li>通过选择国家名称的单选按钮来确定界面语言以及笑话中温度和重量的制式。</li>  
+              <li>点一次按钮，生成一个新故事。</li>
+            </ul>
+        </div>
+      </div>
+      <div class="project">
+        <div class="img-div">
+          <img src="images/gallery.PNG" alt="" >
+        </div>
+        <div class="project-desc">
+            <a href="my-web-projects/gallery-start/index.html"><p class="project-name">图片画廊</p></a>
+            <ul>
+              <li>点击缩略图可展示不同的图片</li>
+              <li>点击左上角的变暗/变亮可调整图片亮度</li>
+            </ul>
+        </div>
+      </div>
+      <div class="project">
+        <div class="img-div">
+          <img id="ballImg" src="images/evilCircle.PNG" alt="">
+        </div>
+        <div class="project-desc">
+            <a href="my-web-projects/bound-ball/index.html"><p class="project-name">恶魔圈</p></a>
+            <ul>
+              <li>小球相撞后会改变颜色</li>
+              <li>小球碰到恶魔圈后会被它吃掉</li>
+              <li>若为电脑端，可通过W（上）S（下）A（左）D（右）键控制恶魔圈在屏幕中移动</li>
+              <li>若为移动端，可直接拖动恶魔圈</li>
+              <li>所有小球被恶魔圈吃掉后游戏结束，会显示花费的时间，看你要花多少时间</li>
+            </ul>          
+        </div>      
+      </div>
+  </body>
+</html> 
